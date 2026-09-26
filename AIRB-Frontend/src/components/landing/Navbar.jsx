@@ -7,27 +7,30 @@ function Navbar() {
                 <div className="logo">
                     <h1 className="text-2xl font-bold text-blue-600">AI Resume Builder</h1>
                 </div>
-                <ul className="hidden md:flex space-x-8 items-center">
-                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600">
-                        <a href="#features">Features</a>
+                <ul className="hidden md:flex space-x-6 items-center">
+                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600 text-sm">
+                        <Link to="/dashboard">Dashboard</Link>
                     </li>
-                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600">
-                        <a href="#templates">Templates</a>
+                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600 text-sm">
+                        <Link to="/analyzer">spaCy Analyzer</Link>
                     </li>
-                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600">
-                        <a href="#how-it-works">How it Works</a>
+                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-indigo-600 text-sm">
+                        <Link to="/job-matcher">Job Matcher</Link>
                     </li>
-                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600">
-                        <a href="#faq">FAQ</a>
+                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600 text-sm">
+                        <Link to="/resume-editor">Editor</Link>
+                    </li>
+                    <li className="cursor-pointer font-medium text-gray-700 transition duration-300 hover:text-blue-600 text-sm">
+                        <Link to="/template-gallery">Templates</Link>
                     </li>
                 </ul>
-                <div className="flex space-x-4 items-center">
-                    <Link to="/auth" state={{ isLogin: true }} className="text-gray-700 font-medium transition duration-300 hover:text-blue-600 px-4 py-2">
-                        Login
+                <div className="flex space-x-3 items-center">
+                    <Link to="/dashboard" className="text-gray-700 font-semibold text-sm transition duration-300 hover:text-blue-600 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-blue-400">
+                        Workspace
                     </Link>
-                    <Link to="/auth" state={{ isLogin: false }}>
-                        <Button variant="primary" className="px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm">
-                            Get Started
+                    <Link to="/resume-editor">
+                        <Button variant="primary" className="px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm">
+                            Create Resume
                         </Button>
                     </Link>
                 </div>
